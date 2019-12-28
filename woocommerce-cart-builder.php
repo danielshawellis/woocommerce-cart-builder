@@ -14,3 +14,18 @@
 if ( ! defined( 'ABSPATH' ) ) {
   die;
 }
+
+/*
+  Define plugin's base class
+*/
+if ( !class_exists( 'AMDV_Woo_Cart_Builder' ) ) {
+    class AMDV_Woo_Cart_Builder
+    {
+        public static function init() {
+            
+        }
+    }
+
+    // Run the below code on entry
+    AMDV_Woo_Cart_Builder::init();
+}
