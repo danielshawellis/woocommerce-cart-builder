@@ -22,7 +22,19 @@ if ( !class_exists( 'AMDV_Woo_Cart_Builder' ) ) {
     class AMDV_Woo_Cart_Builder
     {
         public static function init() {
-            
+          if ( is_admin() ) {
+            self::admin_init();
+          } else {
+            self::public_init();
+          }
+        }
+
+        public static function admin_init() {
+          include_once plugin_dir_path( __FILE__ ) . 'admin/admin.php';
+        }
+
+        public static function public_init() {
+          include_once plugin_dir_path( __FILE__ ) . 'public/public.php';
         }
     }
 
