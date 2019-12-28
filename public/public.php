@@ -3,7 +3,7 @@ if ( !class_exists( 'AMDV_Woo_Cart_Builder_Public' ) ) {
     class AMDV_Woo_Cart_Builder_Public
     {
         public static function init() {
-          echo 'Public Test';
+
         }
     }
 

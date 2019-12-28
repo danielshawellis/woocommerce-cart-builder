@@ -3,7 +3,7 @@ if ( !class_exists( 'AMDV_Woo_Cart_Builder_Admin' ) ) {
     class AMDV_Woo_Cart_Builder_Admin
     {
         public static function init() {
-          echo 'Admin Test';
+          include_once plugin_dir_path( __FILE__ ) . 'templates/plugin-options-page.php';
         }
     }
 
