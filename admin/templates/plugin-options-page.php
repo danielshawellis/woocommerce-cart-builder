@@ -7,12 +7,24 @@ if ( !class_exists( 'AMDV_Woo_Cart_Builder_Admin_Options_Page' ) ) {
         }
 
         public static function create_options_page_menu_item() {
-          add_menu_page( 'WooCommerce Cart Builder Settings', 'Woo Cart Builder', 'administrator', __FILE__, array( $this, 'create_options_page' ) );
+          $page_title = 'WooCommerce Cart Builder Settings';
+          $menu_title = 'Woo Cart Builder';
+          $capability = 'administrator';
+          $slug = 'woocommerce_cart_page_builder';
+          $callback = array( $this, 'create_options_page' );
+          $icon = 'dashicons-admin-plugins';
+          $position = 100;
+
+          add_menu_page( $page_title, $menu_title, $capability, $slug, $callback, $icon, $position );
         }
 
         // This function is called within create_options_page_menu_item()
         public static function create_options_page() {
-          echo 'Options Page Test';
+          ?>
+          <div class="wrap">
+            <h1>WooCommerce Cart Builder Settings</h1>
+          </div>
+          <?php
         }
     }
 
