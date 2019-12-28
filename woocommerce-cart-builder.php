@@ -7,3 +7,10 @@
  * License:           GPL v2 or later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  */
+
+/*
+  Basic environment checks for security
+*/
+if ( ! defined( 'ABSPATH' ) ) {
+  die;
+}
